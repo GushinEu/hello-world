@@ -1,11 +1,10 @@
 #include <stdio.h>
+void main (void)
+{
+	double x,y;
 
-int main(void) { 
+	scanf("%lf %lf", &x, &y);
 
-  printf("%d\n", 1 && 1 );
-  printf("%d\n", 1 && 0 );
-  printf("%d\n", 0 && 1 );
-  printf("%d\n", 0 && 0 );
-    
-  return 0;
+	printf("%d", ((x>0&&y<0)*4) + (x>0&&y>0) + ((x<0&&y<0)*3) + ((x<0&&y>0)*2));
+	return ;
 }
